@@ -1,0 +1,16 @@
+<h1> <%= "Show page for #{@genre.name}" %> </h1>
+
+<h5> Songs </h5>
+<p> <% @genre.songs.each do |song| %>
+<%= link_to "#{song.name}", song_path(song) %> </p>
+<% end %>
+
+<h5> Artists </h5>
+<p> <% @genre.artists.uniq.each do |artist| %>
+<%= link_to "#{artist.name}", artist_path(artist) %> </p>
+<% end %>
+<br>
+<br>
+<br>
+<%= button_to "Edit Genre", edit_genre_path(@genre), {method: :get} %><br><br>
+<%= button_to "Return to Genre Index", genres_path, {method: :get} %>
