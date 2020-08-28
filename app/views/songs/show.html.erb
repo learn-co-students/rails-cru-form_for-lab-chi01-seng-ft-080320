@@ -1,0 +1,11 @@
+<h1> <%= "Show page for #{@song.name}" %> </h1>
+
+<h5> Artist: <%= link_to "#{@song.artist.name}", artist_path(@song.artist) %> </h5>
+
+
+<h5> Genre: <%= link_to "#{@song.genre.name}", genre_path(@song.genre) %> </h5>
+<br>
+<br>
+<br>
+<%= button_to "Edit Song", edit_song_path(@song), {method: :get} %><br><br>
+<%= button_to "Return to Song Index", songs_path, {method: :get} %>

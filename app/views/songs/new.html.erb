@@ -1,0 +1,21 @@
+<h1> Create a New Song </h1>
+
+<% if flash[:errors] %>
+    <% flash[:errors].each do |error|%>
+        <h5 style="color: red"> <%= error %> </h5>
+    <% end %>
+<% end %>
+
+<%= form_for @song do |f| %>
+<%= f.label :name %>
+<%= f.text_field :name %><br>
+<%= f.label :artist_id %>
+<%= f.collection_select :artist_id, Artist.all, :id, :name %><br>
+<%= f.label :genre_id %>
+<%= f.collection_select :genre_id, Genre.all, :id, :name %><br>
+<%= f.submit %>
+<% end %>
+<br>
+<br>
+<br>
+<%= button_to "Return to Song Index", songs_path, {method: :gets} %>

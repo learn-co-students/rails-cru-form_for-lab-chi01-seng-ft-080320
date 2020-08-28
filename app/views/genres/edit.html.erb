@@ -1,0 +1,11 @@
+<h1> Edit Genre</h1>
+
+<%= form_for @genre do |f| %>
+<%= f.label :name %>
+<%= f.text_field :name %><br>
+<%= f.submit %>
+<% end %>
+<br>
+<br>
+<br>
+<%= button_to "Return to Show Page", genre_path(@genre), {method: :gets} %>
