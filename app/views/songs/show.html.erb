@@ -1,0 +1,6 @@
+<h1> Your favorite Song! </h1>
+
+
+<h1><%=@song.name%></h1>
+<p>Artist - <%= link_to(@song.artist.name, artist_path(@artist.id))%></p>
+<p>Genre - <%= link_to(@song.genre.name, genre_path(@genre.id)) %></p>
