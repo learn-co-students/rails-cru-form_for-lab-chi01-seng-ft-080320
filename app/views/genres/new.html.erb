@@ -1,0 +1,8 @@
+<h1>Genre Form</h1>
+
+<%= form_for @genre do |f| %>
+  <%= f.label :My_genre_name %>
+  <%= f.text_field :name, :value => flash[:name] %><br />
+  <%# <%= f.collection_select(:dog_id, @dogs, :id, :name %>
+  <%= f.submit %>
+<% end %>
