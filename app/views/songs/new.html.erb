@@ -1,0 +1,12 @@
+<h1>Song Form</h1>
+
+<%= form_for @song do |f| %>
+  <%= f.label :My_song_name %>
+  <%= f.text_field :name, :value => flash[:name] %><br />
+  <%= f.label :Artist_id %>
+  <%= f.text_field :artist_id %>
+  <%= f.label :Genre_id %>
+  <%= f.text_field :genre_id %>
+  <%# <%= f.collection_select(:dog_id, @dogs, :id, :name %>
+  <%= f.submit %>
+<% end %>

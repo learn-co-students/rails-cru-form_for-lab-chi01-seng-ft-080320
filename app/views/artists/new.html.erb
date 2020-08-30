@@ -1,0 +1,10 @@
+<h1>Artist Form</h1>
+
+<%= form_for @artist do |f| %>
+  <%= f.label :My_artist_name %>
+  <%= f.text_field :name, :value => flash[:name] %><br />
+  <%= f.label :My_artist_bio %>
+  <%= f.text_field :bio, :value => flash[:bio] %><br />
+  <%# <%= f.collection_select(:dog_id, @dogs, :id, :name %>
+  <%= f.submit %>
+<% end %>
